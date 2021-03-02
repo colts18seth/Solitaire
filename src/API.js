@@ -2,10 +2,8 @@ import axios from "axios";
 
 async function getNewDeck() {
     try {
-        await axios.get("https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1")
-            .then((res) => {
-                return res.data.deck_id
-            })
+        const res = await axios.get("https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1");
+        return res;
     } catch (error) {
         console.error(error)
     }

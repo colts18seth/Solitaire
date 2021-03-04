@@ -1,5 +1,5 @@
 import Deck from "./Deck";
-import { getNewDeck } from "./API";
+import { getNewDeck } from "../API";
 import { useEffect, useState } from "react";
 function Game() {
     const [deckId, setDeckId] = useState(null);

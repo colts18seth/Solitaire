@@ -1,19 +1,11 @@
-import Deck from "./Deck";
-import { getNewDeck } from "../API";
-import { useEffect, useState } from "react";
+
+import card from "../Images/AC.png";
+import "./Game.css";
+
 function Game() {
-    const [deckId, setDeckId] = useState(null);
-
-    useEffect(() => {
-        async function getDeckId() {
-            await getNewDeck().then((res) => setDeckId(res.data.deck_id))
-        }
-        getDeckId()
-    }, [])
-
     return (
         <div className="Game">
-            <Deck deckId={deckId} />
+            <img src={card} alt=""></img>
         </div>
     );
 }

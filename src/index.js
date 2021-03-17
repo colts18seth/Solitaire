@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Game from './Components/Game';
+import Table from './Components/Table';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
     <React.StrictMode>
-        <Game />
+        <Table />
     </React.StrictMode>,
     document.getElementById('root')
 );

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { cardback } from "./Images/images"
+import Card from "./Card"
 import "./DrawPile.css";
 
 function DrawPile({ deck }) {
@@ -22,13 +23,14 @@ function DrawPile({ deck }) {
         }
         setDrawPile(discardPile);
         setDiscardPile([]);
+        setDrawnCard();
     }
 
     return (
         <div className="DrawPile">
             {drawPile.length !== 0 ?
                 <span onClick={() => drawCard()}>
-                    <img src={cardback} alt="cardback" />
+                    <Card card={cardback} />
                 </span> :
                 <span onClick={() => resetCards()} className="emptyDrawPile" >
                     <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="currentColor" className="bi bi-arrow-repeat" viewBox="0 0 16 16">
@@ -39,7 +41,7 @@ function DrawPile({ deck }) {
             }
             {drawnCard &&
                 <span>
-                    <img src={drawnCard} alt="" />
+                    <Card card={drawnCard} />
                 </span>
             }
         </div >

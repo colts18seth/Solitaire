@@ -22,6 +22,7 @@ function DrawPile({ deck }) {
         }
         setDrawPile(discardPile);
         setDiscardPile([]);
+        setDrawnCard();
     }
 
     const DrawDeck = styled.div`

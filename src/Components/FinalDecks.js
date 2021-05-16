@@ -9,6 +9,7 @@ function FinalDecks() {
     margin: 0 auto;
     padding 1rem;
     border: 2px solid blue;
+    height: 28vh;
     `
 
     const Pile = styled.div`

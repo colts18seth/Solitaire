@@ -36,6 +36,7 @@ function Table() {
     flex-wrap: wrap;
     justify-content: space around;
     border: 2px solid red;
+    height: 100vh;
     `
 
     return (

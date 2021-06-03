@@ -27,6 +27,21 @@ function shuffle(array) {
     return array;
 }
 
+function allowDrop(e) {
+    e.preventDefault();
+}
+
+function drag(e) {
+    e.dataTransfer.setData("text", e.target.id);
+}
+
+function drop(e) {
+    e.preventDefault();
+    let data = e.dataTransfer.getData("text");
+    let dropZone = document.getElementById("col-1");
+    dropZone.appendChild(document.getElementById(data));
+}
+
 function Table() {
 
     const TableTop = styled.div`
@@ -41,9 +56,9 @@ function Table() {
 
     return (
         <TableTop >
-            <DrawPile deck={deck} />
+            <DrawPile drag={drag} deck={deck} />
             <FinalDecks />
-            <GameColumns />
+            <GameColumns drop={drop} allowDrop={allowDrop} />
         </TableTop >
     );
 }

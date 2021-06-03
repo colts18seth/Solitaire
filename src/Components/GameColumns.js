@@ -2,7 +2,7 @@
 import { cardback } from "./Images/images"
 import styled from 'styled-components'
 
-function GameColumns() {
+function GameColumns({ allowDrop, drop }) {
 
     const ColumnsContainer = styled.div`
     display: flex;
@@ -20,7 +20,7 @@ function GameColumns() {
 
     return (
         <ColumnsContainer>
-            <Pile>
+            <Pile id="col-1" onDrop={(e) => drop(e)} onDragOver={(e) => allowDrop(e)}>
                 <img src={cardback} alt="cardback" />
             </Pile>
             <Pile>

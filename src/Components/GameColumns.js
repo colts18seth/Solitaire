@@ -18,6 +18,8 @@ function GameColumns({ allowDrop, drop }) {
     justify-content: row;
     `
 
+    let colOne = []
+
     return (
         <ColumnsContainer>
             <Pile id="col-1" onDrop={(e) => drop(e)} onDragOver={(e) => allowDrop(e)}>

@@ -8,6 +8,10 @@ let deck = [C2, C3, C4];
 
 shuffle(deck);
 
+function getDrawPile(deck) {
+
+}
+
 function shuffle(array) {
     var currentIndex = array.length, temporaryValue, randomIndex;
 
